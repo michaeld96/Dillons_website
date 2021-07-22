@@ -1,4 +1,59 @@
-nav a
+*
 {
+	padding: 0;
+	margin: 0;
 	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+body
+{
+	font-family: sans-serif;
+}
+nav
+{
+	background-color: black;
+	height: 90px;
+	width: 100%;
+}
+label.logo
+{
+	/*color: #F8CF40;*/
+	color: white;
+	font-size: 40px;
+	line-height: 80px; 
+	padding: 0 50px;
+	font-weight: bold;
+}
+label sub
+{
+	color: white;
+	font-size: 10px;
+	line-height: 80px;
+}
+nav ul
+{
+	float: right;
+	margin-right: 30px;
+}
+nav ul li
+{
+	display: inline-block;
+	line-height: 80px; 
+	margin: 0 20px;
+	}
+nav ul li a
+{
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 8px 15px;
+	border-radius: 5px;
+	font-weight: bold;
+
+}
+a.active,a:hover
+{
+	background: #383838;
+	transition: .5s;
 }
