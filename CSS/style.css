@@ -201,6 +201,7 @@ nav ul li a
 	width: 500px;
 	background-color: black;
 	border-radius: 40px;
+	text-align: center;
 }
 .about-me-picture-container p
 {
@@ -219,6 +220,16 @@ nav ul li a
 	width: 200px;
 	height: auto;
 	border-radius: 200px;
+}
+.about-me-container a
+{
+	font-size: 20px;
+	background-color: white;
+	padding: 3px 5px;
+	border-radius: 5px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
 }
 a.active,a:hover
 {
