@@ -119,6 +119,8 @@ h5
 .name_bar
 {
 	width: 200px;
+	margin-right: auto;
+	margin-left: auto;
 }
 .email_bar
 {
