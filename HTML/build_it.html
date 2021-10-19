@@ -4,7 +4,9 @@
 	<meta charset="utf-8">
 	<title>DTS Build It</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/build_it_style.css">
-	<meta name="viewport" content = "width = device-width, inital-scale = 1.0">
+	<script src = "https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+	<script src = "../javascript/buildit.js"></script>
+	<meta name="viewport" content = "width = device-width">
 </head>
 <body>
 	<nav>
@@ -87,16 +89,28 @@
 	<div class = "form_bar">
 		<h2>Don't See What You Want? Message Us!</h2>
 		<h5>Our staff will email you a quote for price and installation.</h5>
-		<form action="mailto:michaeldick000@gmail.com" method = "POST" enctype="multipart/form-data">
-			Name:<br>
-			<input type="text" name = "name" class = "name_bar"><br>
-			E-mail:<br>
-			<input type="text" name="mail" class = "email_bar"><br>
-			What Parts Would You Like:<br>
-			<textarea name = "message" rows = "5" cols="100"></textarea>
+		<form action="https://formspree.io/f/mbjqedpb" method="post">
+			<label for="email">
+			<label>
+				E-mail:
+				<br>
+				<input type="email" class = "email"/>
+			</label>
 			<br>
-			<input type="submit" value = "Send">
-			<input type = "reset" value = "Reset">
+			<label>
+				Subject:
+				<br>
+				<input type="text" class = "subject"/>
+			</label>
+			<br>
+			<label>
+				Message:
+				<br>
+				<textarea class = "message"></textarea>
+			</label>
+			<br>
+			<button type="submit" class = "submit">Send!</button> 
+			<button type = "clear">Clear!</button>
 		</form>
 	</div>
 </body>	
