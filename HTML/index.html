@@ -4,36 +4,33 @@
 	<meta charset="utf-8">
 	<title>Dillon's Tech Service</title>
 	<link rel="stylesheet" type="text/css" href="../CSS/style.css">
-	<meta name="viewport" content = "width = device-width, inital-scale = 1.0">
+	<script src="../javascript/index.js"></script>
+	<meta name="viewport" content = "width = device-width, initial-scale = 1.0">
+	<!-- Below is used for Font Awesome. -->
+	<script src="https://kit.fontawesome.com/4c4bda27d1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<a name = "top"></a>
+<a name = "top"></a>
+<header>	
+	<h1 class = "logo">DTS<sub>Dillon's Tech Service</sub></h1>
+	<!-- <label class = "logo">DTS<sub>Dillon's Tech Service</sub></label> -->
+	<input type = "checkbox" id="nav-toggle" class = "nav-toggle">
 	<nav>
-		<label class = "logo">DTS<sub>Dillon's Tech Service</sub></label>
 		<ul>
 			<li><a class = "active" href="#top">HOME</a></li>
-			<li><a href="#build">BUILD</a></li>
+			<li><a href="build_it.html">BUILD</a></li>
 			<li><a href="#repair">REPAIR</a></li>
 			<li><a href="#about">ABOUT</a></li>
 		</ul>
 	</nav>
-	
-	<!-- <img src = "../pictures/pc_pic1.jpg" alt = "Goku PC"> -->
-	<div class="slide-container">
-		<!-- Every image needs a span -->
-		<span id = "slider-image-1"></span>
-		<span id = "slider-image-2"></span>
-		<span id = "slider-image-3"></span>
-		<div class = "image-container">
-			<img src = "../pictures/pc_pic1.jpg" class = "slider-image">
-			<img src = "../pictures/pc_pic2.jpg" class = "slider-image">
-			<img src = "../pictures/pc_pic3.jpg" class = "slider-image">
-		</div>
-		<div class="button-container">
-			<a href="#slider-image-1" class = "slider-button"></a>
-			<a href="#slider-image-2" class = "slider-button"></a>
-			<a href="#slider-image-3" class = "slider-button"></a>
-		</div>
+	<!-- For looks for an id not a class. You can click on the item rather than the check box.-->
+	<label for="nav-toggle" class = "nav-toggle-label">
+		<span></span>
+	</label>
+</header>
+
+	<div class = "slideshow-container">
+		<img name = "slide" class = "slideshow"> 
 	</div>
 	<a name = "build"></a>
 	<div class = "build-container">
@@ -66,4 +63,10 @@
 		</div>
 	</div>
 	<a name = "about"></a>
+	<footer>
+		<div class ="icons">
+			<a href = "https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+			<a href = "https://www.instagram.com/_mikedick_/"><i class="fab fa-instagram"></i></a>
+		</div>
+	</footer>
 </body>

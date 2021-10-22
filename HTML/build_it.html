@@ -6,19 +6,27 @@
 	<link rel="stylesheet" type="text/css" href="../CSS/build_it_style.css">
 	<script src = "https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 	<script src = "../javascript/buildit.js"></script>
-	<meta name="viewport" content = "width = device-width">
+	<meta name="viewport" content = "width = device-width, initial-scale = 1.0">
 </head>
 <body>
-	<nav>
-		<label class = "logo">DTS<sub>Dillon's Tech Service</sub></label>
-		<ul>
-			<!-- The # symbol goes to the section of the page. -->
-			<li><a class = "home" href="index.html">Home</a></li>
-			<li><a class = "build_page" href="">BUILD</a></li>
-			<li><a href="index.html#repair">REPAIR</a></li>
-			<li><a href="index.html#about">ABOUT</a></li>
-		</ul>
-	</nav>
+	<header>
+		<h1 class = "logo">DTS<sub>Dillon's Tech Service</sub></h1>
+		<!-- <label class = "logo">DTS<sub>Dillon's Tech Service</sub></label> -->
+		<input type = "checkbox" id="nav-toggle" class = "nav-toggle">
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="#build" class = "active">BUILD</a></li>
+				<li><a href="#repair">REPAIR</a></li>
+				<li><a href="index.html#about">ABOUT</a></li>
+			</ul>
+		</nav>
+		<!-- For looks for an id not a class. You can click on the item rather than the check box.-->
+		<label for="nav-toggle" class = "nav-toggle-label">
+			<span></span>
+		</label>
+	</header>
+	<main>
 	<table>
 		<caption>What is in Stock</caption>
 		<tr>
@@ -94,24 +102,26 @@
 			<label>
 				E-mail:
 				<br>
-				<input type="email" class = "email"/>
+				<input name="email" type="email" class = "email"/>
+				<!-- Need to have name to have the feild populate and send email. -->
 			</label>
 			<br>
 			<label>
 				Subject:
 				<br>
-				<input type="text" class = "subject"/>
+				<input name = "subject" type="text" class = "subject"/>
 			</label>
 			<br>
 			<label>
 				Message:
 				<br>
-				<textarea class = "message"></textarea>
+				<textarea class = "message" name = "message"></textarea>
 			</label>
 			<br>
 			<button type="submit" class = "submit">Send!</button> 
 			<button type = "clear">Clear!</button>
 		</form>
 	</div>
+	</main>
 </body>	
 

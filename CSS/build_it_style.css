@@ -11,48 +11,108 @@ body
 	font-family: sans-serif;
 	background-color: #383838;
 }
+header
+{
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	position: absolute;
+	width:100%;
+	/* z-index makes sure it's ontop of everything. */
+	z-index: 999;
+}
+/* Makes check box disappear */
+.nav-toggle
+{
+	display: none;
+}
+.nav-toggle-label
+{
+	/* Absolutle lets us tell where to go. */
+	position:absolute;
+	top:0;
+	left:0;
+	margin-left: 1em;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+/* Before and after is saying we are selecting the before and after psuedo elements. */
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after
+{
+	display: block;
+	background: white;
+	height: 2px;
+	width: 2em;
+	border-radius: 2px;
+	position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after
+{
+	content: '';
+	position:absolute;
+}
+.nav-toggle-label span::before
+{
+	bottom: 7px;
+}
+.nav-toggle-label span::after
+{
+	top:7px;
+}
 nav
 {
-	/*position: fixed;*/
+	/* Relavtive to the header */
+	position: absolute;
+	text-align: left;
+	/* Line up underneith of the logo. */
+	top: 100%;
+	left: 0;
 	background-color: black;
-	height: 90px;
 	width: 100%;
-}
-label.logo
-{
-	/*color: #F8CF40;*/
-	color: white;
-	font-size: 40px;
-	line-height: 80px; 
-	padding: 0 50px;
-	font-weight: bold;
-}
-label sub
-{
-	color: white;
-	font-size: 10px;
-	line-height: 80px;
+	/* Hides the anchors with the 0 in the second part. */
+	transform: scale(1,0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
 }
 nav ul
 {
-	float: right;
-	margin-right: 30px;
+	margin:0;
+	padding:0;
+	list-style: none;
 }
-nav ul li
+nav li
 {
-	display: inline-block;
-	line-height: 80px; 
-	margin: 0 20px;
-	}
-nav ul li a
+	margin-bottom: 1em;
+	margin-left: 1em;
+}
+nav a
 {
-	color: white;
-	font-size: 20px;
-	text-transform: uppercase;
-	padding: 8px 15px;
-	border-radius: 5px;
+	padding: 3px 5px;
+	border-radius: 5px;;
 	font-weight: bold;
-
+	text-decoration: none;
+	color:white;
+	text-decoration: none;
+	/* font-size: 1.2rem; */
+	text-transform: uppercase;
+	background-color: black;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 2ms ease-in-out;
+}
+.logo
+{
+	font-size: 250%;
+}
+sub
+{
+	font-size: 35%;
 }
 
 table
@@ -105,6 +165,7 @@ table img
 	font-family: sans-serif;
 	font-weight: bold;
 	width: 100%;
+	text-align: center;
 }
 h2
 {
@@ -115,14 +176,6 @@ h5
 	text-align: center;
 	margin-bottom: 20px;
 }
-
-/* .name_bar
-{
-	width: 200px;
-	margin-right: auto;
-	margin-left: auto;
-} */
-
 .email
 {
 	width: 300px;
@@ -136,8 +189,81 @@ textarea
 	width: 300px;
 	height: 150px;
 }
+caption
+{
+	margin-top: 1em;
+}
 a.active,a:hover
 {
 	background: #383838;
 	transition: .5s;
+}
+
+/* Check looks for the checkbox is checked. 
+~ is looking for any sibling  from this class.*/
+.nav-toggle:checked ~ nav
+{
+	transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a
+{
+	opacity: 1;
+		/* 250ms at the end is saying that you take this much 
+	time before starting the animation. */
+	transition: opacity 250ms ease-in-out 300ms;
+}
+
+@media screen and (min-width:1064px)
+{
+	.nav-toggle-label
+	{
+		display: none;
+	}
+	header
+	{
+		display:grid;
+		/* Setting up four colums, and navgation is set at 877px to 1 fr.*/
+		grid-template-columns: 1fr auto minmax(400px, 1fr) 1fr 1fr;
+	}
+	.logo
+	{
+		/* When using grid, when using 1/4 it starts at 1 and ends at 4.
+		Just using 1 just places the start at 1. */
+		grid-column: 1/2;
+	}
+
+	nav
+	{
+		/* All unset is taking all of the modications above. */
+		all: unset;
+		grid-column: 4/6;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	nav ul
+	{
+		display: flex;
+		justify-content: flex-end;
+	}
+	nav li
+	{
+		margin-left: 2em;
+		margin-bottom: 0px;
+		margin-right: 1em;
+	}
+	nav a
+	{
+		opacity: 1;
+	}
+	footer a:hover
+{
+	transition: .5s;
+	background: blue;
+}
+a.active,a:hover
+{
+	background: #383838;
+	transition: .5s;
+}
 }
