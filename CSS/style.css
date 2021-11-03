@@ -284,49 +284,54 @@ a.active,a:hover
 }
 
 
-@media screen and (min-width:1064px)
-{
-	.nav-toggle-label
+@media screen and (min-width:700px)
+/**************************** Nav Bar Start ******************************* */
 	{
-		display: none;
-	}
-	header
-	{
-		display:grid;
-		/* Setting up four colums, and navgation is set at 877px to 1 fr.*/
-		grid-template-columns: 1fr auto minmax(400px, 1fr) 1fr 1fr;
-	}
-	.logo
-	{
-		/* When using grid, when using 1/4 it starts at 1 and ends at 4.
-		Just using 1 just places the start at 1. */
-		grid-column: 1/2;
-	}
-
-	nav
-	{
-		/* All unset is taking all of the modications above. */
-		all: unset;
-		grid-column: 4/6;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-	}
-	nav ul
-	{
-		display: flex;
-		justify-content: flex-end;
-	}
-	nav li
-	{
-		margin-left: 2em;
-		margin-bottom: 0px;
-		margin-right: 1em;
-	}
-	nav a
-	{
-		opacity: 1;
-	}
+		.nav-toggle-label
+		{
+			display: none;
+		}
+		header
+		{
+			display:grid;
+			/* Setting up four colums, and navgation is set at 877px to 1 fr.*/
+			/* grid-template-columns: 400px auto minmax(400px, 1fr) 1fr 1fr; */
+			grid-template-columns: 250px 55% 1fr 1fr 1fr 1fr 1fr;
+		}
+		.logo
+		{
+			/* When using grid, when using 1/4 it starts at 1 and ends at 4.
+			Just using 1 just places the start at 1. */
+			grid-column: 1/2;
+	
+		}
+	
+		nav
+		{
+			/* All unset is taking all of the modications above. */
+			all: unset;
+			grid-column: 4/7;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			
+		}
+		nav ul
+		{
+			display: flex;
+			justify-content: flex-end;
+		}
+		nav li
+		{
+			margin-left: 2em;
+			margin-bottom: 0px;
+			/* margin-right: 1em; */
+		}
+		nav a
+		{
+			opacity: 1;
+		}
+/**************************** Nav Bar End ******************************* */
 	footer a:hover
 {
 	transition: .5s;

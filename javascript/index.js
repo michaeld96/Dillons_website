@@ -5,9 +5,9 @@ var images = [];
 //Time for the slideshow.
 var time = 3000;
 //Images List.
-images[0] = '../pictures/pc_pic1.jpg';
-images[1] = '../pictures/pc_pic2.jpg';
-images[2] = '../pictures/pc_pic3.jpg';
+images[0] = 'pictures/pc_pic1.jpg';
+images[1] = 'pictures/pc_pic2.jpg';
+images[2] = 'pictures/pc_pic3.jpg';
 
 //Function to change the image.
 
