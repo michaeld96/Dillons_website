@@ -207,7 +207,7 @@ sub
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	width: 55%;
+	width: 90%;
 	background-color: black;
 	border-radius: 3em;
 	text-align: center;
@@ -332,6 +332,19 @@ a.active,a:hover
 			opacity: 1;
 		}
 /**************************** Nav Bar End ******************************* */
+.about-me-picture-container
+{
+	padding: 1em;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 55%;
+	background-color: black;
+	border-radius: 3em;
+	text-align: center;
+}
 	footer a:hover
 {
 	transition: .5s;
